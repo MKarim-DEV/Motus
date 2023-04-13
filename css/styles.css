@@ -1,5 +1,5 @@
 
-*{
+* {
     font-family:'Quicksand', sans-serif;
     margin: 0;
     padding: 0;
@@ -7,7 +7,7 @@
 header {
     margin-bottom: -9px;
 }
-p{
+p {
     margin:0;
     padding:0;
 }
@@ -16,8 +16,8 @@ a {
     text-decoration: none;
 }
 
-table{
-    border:solid black 2px;
+table {
+    border:solid black 3px;
     background-color: rgb(32, 195, 240);
 }
 td {font-size: 40px;
@@ -25,13 +25,16 @@ td {font-size: 40px;
     background-clip:content-box;
     border-radius: 50%;
     background-color: orange;
-    border: solid gold 2px;
+    border: solid blue 2px;
     height: 52px;
     width: 60px;
 }
 li {
-    font-size:13px;
+    font-size:17px;
     font-weight:bold;
+}
+.formulaire {
+    box-shadow:5px 5px 5px gray;
 }
 footer p {
     font-size: 10px;
