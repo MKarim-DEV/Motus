@@ -20,11 +20,10 @@ table {
     border:solid black 3px;
     background-color: rgb(32, 195, 240);
 }
-td {font-size: 40px;
+td {
+    font-size: 35px;
+    font-weight: bold;
     text-align: center;
-    background-clip:content-box;
-    border-radius: 50%;
-    background-color: orange;
     border: solid blue 2px;
     height: 52px;
     width: 60px;
@@ -39,4 +38,14 @@ li {
 footer p {
     font-size: 10px;
 }
-
+.wellplaced{
+    display:block;
+}
+.unexistent{
+    display:none;
+}
+.misplaced{
+    background-clip:content-box;
+    border-radius: 50%;
+    background-color: orange;
+}
