@@ -38,7 +38,13 @@ function display_input_word(word) {
     document.querySelector(".hidden").classList.remove("hidden");
 }
 
-function compare_words(randomWord, guessWord) {
+
+let turn = 0;
+document.querySelector("#guessForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+  let guessWord = document.querySelector("#mot").value.toUpperCase();
+  display_input_word(guessWord);
+  function compare_words(randomWord, guessWord) {
     
     for (let i = 0; i < randomWord.length; i++) {
         let wellPlacedCell = document.querySelector(table.rows[turn].cells[i]);
@@ -47,35 +53,18 @@ function compare_words(randomWord, guessWord) {
           }
      }
     }
-
-let turn = 0;
-document.querySelector("#guessForm").addEventListener("submit", function(event) {
-  event.preventDefault();
-  let guessWord = document.querySelector("#mot").value.toUpperCase();
-  display_input_word(guessWord);
-   if (guessWord === randomWord) {
+    if (guessWord === randomWord) {
     alert("Bravo, vous avez gagné!!!");
     play_again();
-  } else {
+    } else {
     turn++;
     if (turn === 10) {
       alert("Dommage, le mot à deviner était " + randomWord.toUpperCase() + ".");
       play_again();
     } 
     document.querySelector("#guessForm").reset();
-  }
-})
-function comparerMots(randomWord, guessWord) {
-    
-    for (let i = 0; i < randomWord.length; i++) {
-        let lettreRandom = randomWord[i];
-        let lettreGuess = guessWord[i];
-        let cellule = document.querySelector(td[i]);
-        if (lettreRandom === lettreGuess) {
-            cellule.classList.add("wellplaced");
-          }
-     }
     }
+})
 
 function play_again() {
     let answer = prompt("Souhaitez-vous jouer une nouvelle partie? (O/N)");
