@@ -15,8 +15,8 @@ console.log(randomWord[1]);
 console.log(randomWord[7]);
   
 function stock_random_word(word) {
-    const table = document.querySelector("table");
-    const letters = word.split('');
+    let table = document.querySelector("table");
+    let letters = word.split('');
   
   for (let row = 0; row < 10; row++) {
     for (let col = 0; col < 8; col++) {
@@ -28,11 +28,11 @@ function stock_random_word(word) {
 stock_random_word(randomWord);
 
 function display_input_word(word) {
-    const table = document.querySelector("table");
-    const letters = word.split('');
+    let table = document.querySelector("table");
+    let letters = word.split('');
 
     for (let col = 0; col < 8; col++) {
-      const td = table.rows[turn].cells[col];
+      let td = table.rows[turn].cells[col];
       td.innerHTML = letters[col];
     }
     document.querySelector(".hidden").classList.remove("hidden");
@@ -41,15 +41,15 @@ function display_input_word(word) {
 let turn = 0;
 document.querySelector("#guessForm").addEventListener("submit", function(event) {
   event.preventDefault();
-  var guess = document.querySelector("#mot").value;
+  let guess = document.querySelector("#mot").value.toUpperCase();
   display_input_word(guess);
    if (guess === randomWord) {
-    alert("You win!");
+    alert("Bravo, vous avez gagné!!!");
     play_again();
   } else {
     turn++;
     if (turn === 10) {
-      alert("You lose. The word was " + randomWord + ".");
+      alert("Dommage, le mot à deviner était " + randomWord.toUpperCase() + ".");
       play_again();
     } 
     document.querySelector("#guessForm").reset();
@@ -58,7 +58,7 @@ document.querySelector("#guessForm").addEventListener("submit", function(event) 
 
 function play_again() {
     let answer = prompt("Souhaitez-vous jouer une nouvelle partie? (O/N)");
-    if (answer && answer.toLowerCase() === "O") {
+    if (answer || answer.toLowerCase() === "O") {
       window.location.reload();
     }
   }
