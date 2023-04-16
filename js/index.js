@@ -45,15 +45,23 @@ document.querySelector("#guessForm").addEventListener("submit", function(event) 
   display_input_word(guess);
    if (guess === randomWord) {
     alert("You win!");
+    play_again();
   } else {
     turn++;
     if (turn === 10) {
       alert("You lose. The word was " + randomWord + ".");
-      prompt("Voulez-vous faire une nouvelle partie?")
+      play_again();
     } 
     document.querySelector("#guessForm").reset();
   }
 })
+
+function play_again() {
+    let answer = prompt("Souhaitez-vous jouer une nouvelle partie? (O/N)");
+    if (answer && answer.toLowerCase() === "O") {
+      window.location.reload();
+    }
+  }
 
 
 
