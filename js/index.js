@@ -14,7 +14,7 @@ console.log(randomWord[0]);
 console.log(randomWord[1]);
 console.log(randomWord[7]);
   
-function display_in_table(word) {
+function stock_random_word(word) {
     const table = document.querySelector("table");
     const letters = word.split('');
   
@@ -25,8 +25,35 @@ function display_in_table(word) {
     }
   }
 }
-display_in_table(randomWord);
-  
+stock_random_word(randomWord);
+
+function display_input_word(word) {
+    const table = document.querySelector("table");
+    const letters = word.split('');
+
+    for (let col = 0; col < 8; col++) {
+      const td = table.rows[turn].cells[col];
+      td.innerHTML = letters[col];
+    }
+    document.querySelector(".hidden").classList.remove("hidden");
+}
+
+let turn = 0;
+document.querySelector("#guessForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+  var guess = document.querySelector("#mot").value;
+  display_input_word(guess);
+   if (guess === randomWord) {
+    alert("You win!");
+  } else {
+    turn++;
+    if (turn === 10) {
+      alert("You lose. The word was " + randomWord + ".");
+      prompt("Voulez-vous faire une nouvelle partie?")
+    } 
+    document.querySelector("#guessForm").reset();
+  }
+})
 
 
 

@@ -38,13 +38,20 @@ li {
 footer p {
     font-size: 10px;
 }
-.wellplaced{
-    display:block;
+.found{
+    color:black;
 }
-/*.unexistent{
-    display:none;
-}*/
+.hidden{
+    color:rgb(32, 195, 240);
+}
+.wellplaced{
+    color:black;
+    background-clip:content-box;
+    border-radius: 50%;
+    background-color: red;
+}
 .misplaced{
+    color:black;
     background-clip:content-box;
     border-radius: 50%;
     background-color: orange;

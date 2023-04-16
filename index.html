@@ -23,28 +23,18 @@
                 <div class="row">
                     <div class="col-lg-6 d-flex justify-content-center p-3">
                         <table>
-                            <tr>    
-                                <td><span class="lig1 col1"></span></td>
-                                <td><span class="lig1 col2"></span></td>
-                                <td><span class="lig1 col3"></span></td>
-                                <td><span class="lig1 col4"></span></td>
-                                <td><span class="lig1 col5"></span></td>
-                                <td><span class="lig1 col6"></span></td>
-                                <td><span class="lig1 col7"></span></td>
-                                <td><span class="lig1 col8"></span></td>
+                            <tr class="hidden">    
+                                <td class="found"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
                             </tr>    
-                            <tr class="ligne2">
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr class="ligne3">
-                                <td></td>
+                            <tr class="hidden">
+                                <td class="found"></td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
@@ -53,18 +43,8 @@
                                 <td></td>
                                 <td></td>
                             </tr>
-                            <tr class="ligne4">
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr class="ligne5">
-                                <td></td>
+                            <tr class="hidden">
+                                <td class="found"></td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
@@ -73,18 +53,8 @@
                                 <td></td>
                                 <td></td>
                             </tr>
-                            <tr class="ligne6">
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr class="ligne7">
-                                <td></td>
+                            <tr class="hidden">
+                                <td class="found"></td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
@@ -93,18 +63,8 @@
                                 <td></td>
                                 <td></td>
                             </tr>
-                            <tr class="ligne8">
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr class="ligne9">
-                                <td></td>
+                            <tr class="hidden">
+                                <td class="found"></td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
@@ -113,8 +73,48 @@
                                 <td></td>
                                 <td></td>
                             </tr>
-                            <tr class="ligne10">
+                            <tr class="hidden">
+                                <td class="found"></td>
                                 <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr class="hidden">
+                                <td class="found"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr class="hidden">
+                                <td class="found"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr class="hidden">
+                                <td class="found"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr class="hidden">
+                                <td class="found"></td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
@@ -135,14 +135,14 @@
                                 <li>Vous disposez d'un maximum de 10 tentatives pour découvrir le mot caché.</li>
                             </ul>
                             <div class="row">
-                                <form action="" method="post" class="formulaire border border-3 border-primary rounded-5 p-3">
+                                <form id="guessForm" action="" method="post" class="formulaire border border-3 border-primary rounded-5 p-3">
                                     <div class="mb-4 d-flex flex-column justify-content-center align-items-center ">
                                         <label for="mot">
                                             <h2 class="text-warning fw-bold text-decoration-underline">
                                             Entrez un mot de 8 lettres
                                             </h2>
                                         </label><br>
-                                        <input type="text" id="mot" name="mot" minlength="8" maxlength="8" 
+                                        <input type="text" id="mot" name="mot" minlength="8" maxlength="8" required
                                         class="form-control form-control-lg border border-warning text-primary text-uppercase w-50 fs-3 fw-semibold text-center">
                                     </div>
                                     <div class="d-flex justify-content-center">
