@@ -41,9 +41,9 @@ footer p {
 .wellplaced{
     display:block;
 }
-.unexistent{
+/*.unexistent{
     display:none;
-}
+}*/
 .misplaced{
     background-clip:content-box;
     border-radius: 50%;
